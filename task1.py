@@ -71,14 +71,14 @@ valbinary = binaryvectorizer.transform(valtexts)
 testbinary = binaryvectorizer.transform(testtexts)
 
 
-#-------------------Binary Logistic Regression-----------------------
+
 
 binarymodel = LogisticRegression(max_iter=1000)
 
 # 使用训练集训练逻辑回归
 binarymodel.fit(trainbinary, trainlabels)
 
-#-------------------Binary Validation-----------------------
+
 
 # 用训练好的模型预测验证集
 valpredict = binarymodel.predict(valbinary)
@@ -91,7 +91,7 @@ print("Binary Validation Accuracy:", valaccuracy)
 print("Binary Validation Macro-F1:", valmacro)
 
 
-#-------------------Word Frequency-----------------------
+
 
 # binary=False：记录单词实际出现次数
 frequencyvectorizer = CountVectorizer(
@@ -108,20 +108,20 @@ valfrequency = frequencyvectorizer.transform(valtexts)
 testfrequency = frequencyvectorizer.transform(testtexts)
 
 
-#-------------------Word Frequency Logistic Regression-----------------------
+
 
 frequencymodel = LogisticRegression(max_iter=1000)
 
-# 使用Word Frequency训练模型
+# Word Frequency训练模型
 frequencymodel.fit(trainfrequency, trainlabels)
 
 
-#-------------------Word Frequency Validation-----------------------
+
 
 valfrequencypredict = frequencymodel.predict(valfrequency)
 
 valfrequencyaccuracy = accuracy(vallabels, valfrequencypredict)
 valfrequencymacro = macro(vallabels, valfrequencypredict)
 
-print("Word Frequency Validation Accuracy:", valfrequencyaccuracy)
-print("Word Frequency Validation Macro-F1:", valfrequencymacro)
+print("Accuracy:", valfrequencyaccuracy)
+print("Macro-F1:", valfrequencymacro)

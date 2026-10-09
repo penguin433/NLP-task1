@@ -1,0 +1,4 @@
+Method,               Best_C,    Test_Accuracy,    Test_Macro_F1
+Pre-trained GloVe,      10,        0.977431,          0.940342
+AG News Word2Vec,       10,        0.972222,          0.925078
+NYT Word2Vec,           10,        0.979167,          0.946854
