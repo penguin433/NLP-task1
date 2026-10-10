@@ -125,3 +125,22 @@ valfrequencymacro = macro(vallabels, valfrequencypredict)
 
 print("Accuracy:", valfrequencyaccuracy)
 print("Macro-F1:", valfrequencymacro)
+
+# -------------------- Binary Test --------------------
+
+binary_test_predict = binarymodel.predict(testbinary)
+
+print("Binary Test Accuracy:",
+      accuracy(testlabels, binary_test_predict))
+print("Binary Test Macro-F1:",
+      macro(testlabels, binary_test_predict))
+
+
+# -------------------- Word Frequency Test --------------------
+
+frequency_test_predict = frequencymodel.predict(testfrequency)
+
+print("Word Frequency Test Accuracy:",
+      accuracy(testlabels, frequency_test_predict))
+print("Word Frequency Test Macro-F1:",
+      macro(testlabels, frequency_test_predict))

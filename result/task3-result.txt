@@ -1,0 +1,9 @@
+Model: google-bert/bert-base-uncased
+Epochs: 3
+Max Length: 64
+Batch Size: 8
+Learning Rate: 2e-5
+Best Epoch: 3
+
+BERT Test Accuracy: 0.9800347222222222
+BERT Test Macro-F1: 0.9500881519547503
